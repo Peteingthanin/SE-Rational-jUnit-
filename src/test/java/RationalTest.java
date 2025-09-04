@@ -72,10 +72,16 @@ public class RationalTest {
     public void testEqual() {
         r1.numerator = 1;
         r1.denominator = 2;
+        r2.numerator = 4;
+        r2.denominator = 8;
+        r1.equals(r2);
+        Assert.assertEquals(true, r1.equals(r2));
+        r1.numerator = 1;
+        r1.denominator = 2;
         r2.numerator = 1;
         r2.denominator = 4;
         r1.equals(r2);
-        Assert.assertEquals(true, r1.equals(r2));
+        Assert.assertEquals(false, r1.equals(r2));
     }
 
     @Test
@@ -86,6 +92,18 @@ public class RationalTest {
         r2.denominator = 8;
         r1.compareTo(r2);
         Assert.assertEquals(0, r1.compareTo(r2));
+        r1.numerator = 1;
+        r1.denominator = 2;
+        r2.numerator = 3;
+        r2.denominator = 8;
+        r1.compareTo(r2);
+        Assert.assertEquals(1, r1.compareTo(r2));
+        r1.numerator = 1;
+        r1.denominator = 2;
+        r2.numerator = 2;
+        r2.denominator = 8;
+        r1.compareTo(r2);
+        Assert.assertEquals(-1, r1.compareTo(r2));
     }
 
 

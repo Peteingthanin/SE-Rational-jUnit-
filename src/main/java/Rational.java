@@ -94,7 +94,10 @@ class Rational {
      */
     public boolean equals(Object x) {
         // to be completed
+
         if(x instanceof Rational) {
+            ((Rational) x).simplestForm();
+            simplestForm();
             if(((Rational) x).numerator == numerator && ((Rational) x).denominator == denominator) {
                 return true;
             }
@@ -115,8 +118,9 @@ class Rational {
             ((Rational) x).simplestForm();
             simplestForm();
             if(((Rational) x).numerator == numerator && ((Rational) x).denominator == denominator) {
-
                 return 0;
+            } else if (((Rational) x).numerator > numerator) {
+                return 1;
             }
         }
         return -1; // TODO: this needs to be modified.
