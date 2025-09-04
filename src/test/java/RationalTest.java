@@ -82,8 +82,8 @@ public class RationalTest {
     public void testCompareTo(){
         r1.numerator = 1;
         r1.denominator = 2;
-        r2.numerator = 1;
-        r2.denominator = 2;
+        r2.numerator = 4;
+        r2.denominator = 8;
         r1.compareTo(r2);
         Assert.assertEquals(0, r1.compareTo(r2));
     }

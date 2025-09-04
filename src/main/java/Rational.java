@@ -112,8 +112,10 @@ class Rational {
         // to be completed
 
         if(x instanceof Rational) {
+            ((Rational) x).simplestForm();
             simplestForm();
             if(((Rational) x).numerator == numerator && ((Rational) x).denominator == denominator) {
+
                 return 0;
             }
         }
