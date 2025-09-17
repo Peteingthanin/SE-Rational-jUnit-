@@ -113,13 +113,12 @@ class Rational {
      */
     public long compareTo(Object x) {
         // to be completed
-
         if(x instanceof Rational) {
             ((Rational) x).simplestForm();
             simplestForm();
             if(((Rational) x).numerator == numerator && ((Rational) x).denominator == denominator) {
                 return 0;
-            } else if (((Rational) x).numerator > numerator) {
+            } else if ((numerator * ((Rational) x).denominator) > (denominator * ((Rational) x).numerator)) {
                 return 1;
             }
         }

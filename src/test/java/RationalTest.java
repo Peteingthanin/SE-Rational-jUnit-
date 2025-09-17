@@ -100,12 +100,11 @@ public class RationalTest {
         Assert.assertEquals(1, r1.compareTo(r2));
         r1.numerator = 1;
         r1.denominator = 2;
-        r2.numerator = 2;
+        r2.numerator = 5;
         r2.denominator = 8;
         r1.compareTo(r2);
         Assert.assertEquals(-1, r1.compareTo(r2));
     }
-
 
     /***
      * This method will be called every time after the other @Test method
